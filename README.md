@@ -1,33 +1,9 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="dsa_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -50,7 +26,7 @@ After you're finished please remove all the comments and instructions!
   - [Usage](#usage)
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
+- [👥 Author](#author)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -60,62 +36,85 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [DSA] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+**[DSA]** is a C# solution to prepare the most common interview tests for data structures and algorithms.
 
-**[your_project__name]** is a...
+1. Graph
+   - Breadth First Search(BFS): 
+     <img src="bfs-5.png" alt="BFS" width="140"  height="auto" />
+2. Linked List
+3. Dynamic Programming
+4. Sorting And Searching
+5. Tree / Binary Search Tree
+6. Number Theory
+7. BIT Manipulation
+8. String / Array
 
 ## 🛠 Built With <a name="built-with"></a>
-
+C#.NET 
 ### Tech Stack <a name="tech-stack"></a>
 
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
-  <summary>Client</summary>
+  <summary>Class Library</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li>ClassLibrary Project</li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Tests</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li>xUnit Test Project</li>
   </ul>
 </details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+- **[Big-O Notation]**
+[Big-O freecodecamp](https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c)
+Big O notation is one of the most fundamental tools for computer scientists to analyze the cost of an algorithm. 
+Big O notation describes the complexity of your code using algebraic terms.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+To understand what Big O notation is, we can take a look at a typical example, O(n²), which is usually pronounced “Big O squared”. 
+The letter “n” here represents the input size, and the function “g(n) = n²” inside the “O()” gives us an idea of how complex 
+the algorithm is with respect to the input size.
+
+A typical algorithm that has the complexity of O(n²) would be the selection sort algorithm:
+
+```
+SelectionSort(List) {
+  for(i from 0 to List.Length) {
+    SmallestElement = List[i]
+    for(j from i to List.Length) {
+      if(SmallestElement > List[j]) {
+        SmallestElement = List[j]
+      }
+    }
+    Swap(List[i], SmallestElement)
+  }
+}
+```
+
+<img src="Big-o.png" alt="Big-O" width="140"  height="auto" />
+
+- **[Data Structures]**
+- **[Algorithms]**
+- **[Unit Testing]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+<!-- LIVE DEMO 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
 
 - [Live Demo Link](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
+-->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -201,21 +200,13 @@ Example:
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👤 Author <a name="author"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Elio Cortés**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@NeckerFree](https://github.com/NeckerFree)
+- Twitter: [@ElioCortesM](https://twitter.com/ElioCortesM)
+- LinkedIn: [elionelsoncortes](https://www.linkedin.com/in/elionelsoncortes/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,11 +256,9 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
+- **Related documentation**
+[GH Algorithms](https://github.com/TheAlgorithms/C-Sharp)
+[Top 10 algorithms in Interview Questions](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions)
 
 - **[Question_2]**
 

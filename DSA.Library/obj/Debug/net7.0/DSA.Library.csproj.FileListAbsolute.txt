@@ -1,0 +1,12 @@
+C:\Elio\Development\Projects\DSA\DSA.Library\bin\Debug\net7.0\DSA.Library.deps.json
+C:\Elio\Development\Projects\DSA\DSA.Library\bin\Debug\net7.0\DSA.Library.dll
+C:\Elio\Development\Projects\DSA\DSA.Library\bin\Debug\net7.0\DSA.Library.pdb
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\DSA.Library.csproj.AssemblyReference.cache
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\DSA.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\DSA.Library.AssemblyInfoInputs.cache
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\DSA.Library.AssemblyInfo.cs
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\DSA.Library.csproj.CoreCompileInputs.cache
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\DSA.Library.dll
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\refint\DSA.Library.dll
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\DSA.Library.pdb
+C:\Elio\Development\Projects\DSA\DSA.Library\obj\Debug\net7.0\ref\DSA.Library.dll
