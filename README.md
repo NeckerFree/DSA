@@ -3,7 +3,7 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="dsa_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="dsa_logo.png" alt="logo" width="500"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -42,7 +42,8 @@
 
 1. Graph
    - Breadth First Search(BFS): 
-     <img src="bfs-5.png" alt="BFS" width="140"  height="auto" />
+     </br>
+     <img src="bfs-5.png" alt="BFS" width="300"  height="auto" />
 2. Linked List
 3. Dynamic Programming
 4. Sorting And Searching
@@ -99,7 +100,7 @@ SelectionSort(List) {
 }
 ```
 
-<img src="Big-o.png" alt="Big-O" width="140"  height="auto" />
+<img src="Big-o.png" alt="Big-O" width="550"  height="auto" />
 
 - **[Data Structures]**
 - **[Algorithms]**
