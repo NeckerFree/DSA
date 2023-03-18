@@ -1,7 +1,9 @@
-﻿namespace DSA.Tests
+﻿
+namespace DSA.Tests
 {
     public class BFSTests
     {
+        [Fact]
         public void ValidateBreadthFirstTraversal()
         {
             Graph graph = new Graph(4);
@@ -14,8 +16,8 @@
             graph.AddEdge(3, 3);
             
             BFS bFS = new BFS(graph);
-            int[] traverse= bFS.Traverse(2);
-            int[] expected = { 2, 0, 3, 1 };
+            int?[] traverse= bFS.Traverse(2);
+            int?[] expected = { 2, 0, 3, 1 };
             Assert.Equal(expected, traverse);
         }
     }

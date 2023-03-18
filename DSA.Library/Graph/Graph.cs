@@ -6,7 +6,7 @@
     public class Graph
     {
 
-        private int _numVertices;
+        public int Vertices { get; internal set; }
 
         LinkedList<int>[] _adjacencyList;
 
@@ -17,13 +17,19 @@
             {
                 _adjacencyList[i] = new LinkedList<int>();
             }
-            _numVertices = numVertices;
+            Vertices = numVertices;
         }
+
+        
 
         public void AddEdge(int origen, int destination)
         {
             _adjacencyList[origen].AddLast(destination);
         }
 
+        internal LinkedList<int> GetAdjacents(int v)
+        {
+           return _adjacencyList[v];
+        }
     }
 }
