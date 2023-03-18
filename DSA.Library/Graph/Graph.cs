@@ -31,5 +31,15 @@
         {
            return _adjacencyList[v];
         }
+
+        public class DFS
+        {
+            private Graph g;
+
+            public DFS(Graph g)
+            {
+                this.g = g;
+            }
+        }
     }
 }

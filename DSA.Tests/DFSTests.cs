@@ -1,10 +1,11 @@
-﻿
+﻿using DSA.Library.Graph;
+
 namespace DSA.Tests
 {
-    public class BFSTests
+    public class DFSTests
     {
         [Fact]
-        public void ValidateBreadthFirstTraversal()
+        public void ValidateDeepFirstTraversal()
         {
             Graph graph = new Graph(4);
 
@@ -14,11 +15,12 @@ namespace DSA.Tests
             graph.AddEdge(2, 0);
             graph.AddEdge(2, 3);
             graph.AddEdge(3, 3);
-            
-            BFS bFS = new BFS(graph);
-            int?[] traverse= bFS.Traverse(3);
-            int?[] expected = { 2, 0, 3, 1 };
+
+            DFS dFS=new DFS(graph);
+            int?[] traverse = dFS.Traverse();
+            int?[] expected = { 0, 1, 2, 3 };
             Assert.Equal(expected, traverse);
         }
     }
+   
 }
