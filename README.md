@@ -44,6 +44,9 @@
    - Breadth First Search(BFS): 
      </br>
      <img src="bfs-5.png" alt="BFS" width="300"  height="auto" />
+   - Deep Fist Search
+   </br>
+     <img src="ezgif.com-gif-maker7.gif" alt="BFS" width="300"  height="auto" />
 2. Linked List
 3. Dynamic Programming
 4. Sorting And Searching

@@ -8,12 +8,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		bfs-5.png = bfs-5.png
 		Big-o.png = Big-o.png
 		dsa_logo.png = dsa_logo.png
+		ezgif.com-gif-maker7.gif = ezgif.com-gif-maker7.gif
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Library", "DSA.Library\DSA.Library.csproj", "{7610171F-C6B8-4D60-ABEA-2B2D4124F2A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA.Library", "DSA.Library\DSA.Library.csproj", "{7610171F-C6B8-4D60-ABEA-2B2D4124F2A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Tests", "DSA.Tests\DSA.Tests.csproj", "{35B22EC1-7E28-4401-8728-B2710D493E15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA.Tests", "DSA.Tests\DSA.Tests.csproj", "{35B22EC1-7E28-4401-8728-B2710D493E15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
