@@ -1,4 +1,6 @@
-﻿using DSA.Library.Queue;
+﻿using DSA.Library.LinkedList;
+using DSA.Library.Queue;
+using System;
 using System.Linq.Expressions;
 
 namespace DSA.Library.Graph
@@ -14,7 +16,7 @@ namespace DSA.Library.Graph
 
         public int?[] Traverse(int nodeValue)
         {
-            List<int?> traverse = new List<int?>();
+            List<int?> path = new List<int?>();
             bool[] visited = new bool[graph.Vertices];
             for (int i = 0; i < visited.Length; i++)
             {
@@ -26,11 +28,12 @@ namespace DSA.Library.Graph
             while (queue.IsEmpty == false)
             {
                 nodeValue = queue.Dequeue();
-                traverse.Add(nodeValue);
+                path.Add(nodeValue);
 
-                LinkedList<int> list = graph.GetAdjacents(nodeValue);
-                foreach (var item in list)
+                MyLinkedList<int> list = graph.GetAdjacents(nodeValue);
+                for (int i = 0; i < list.Count; i++)
                 {
+                    var item = list.GetElementByIndex(i);
                     if (!visited[item])
                     {
                         visited[item] = true;
@@ -38,7 +41,7 @@ namespace DSA.Library.Graph
                     }
                 }
             }
-            return traverse.ToArray();
+            return path.ToArray();
         }
     }
 
