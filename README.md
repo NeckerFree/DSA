@@ -41,7 +41,7 @@
 **[DSA]** is a C# solution to prepare the most common interview tests for data structures and algorithms.
 
 1. Graph
-   - Breadth First Search(BFS): 
+   - Breadth First Search [BFS](https://gitlab.com/microverse/guides/coding_challenges/hints/blob/master/challenges/tress_and_graphs/breadth-first-search.md)
      </br>
      <img src="bfs-5.png" alt="BFS" width="300"  height="auto" />
    - Deep Fist Search

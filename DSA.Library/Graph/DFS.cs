@@ -1,4 +1,6 @@
-﻿namespace DSA.Library.Graph
+﻿using DSA.Library.LinkedList;
+
+namespace DSA.Library.Graph
 {
     public class DFS
     {
@@ -27,7 +29,7 @@
         {
             visited[v] = true;
             traverse.Add(v);
-            LinkedList<int> list = graph.GetAdjacents(v);
+            MyLinkedList<int> list = graph.GetAdjacents(v);
             for (int i = 0; i < list.Count; i++)
             {
                 if (!visited[i])
