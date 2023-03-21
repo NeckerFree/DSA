@@ -1,6 +1,6 @@
 ﻿namespace DSA.Library.LinkedList
 {
-    internal class MyLinkedListNode<T>
+    public class MyLinkedListNode<T>
     {
         public T? Data { get; }
 
