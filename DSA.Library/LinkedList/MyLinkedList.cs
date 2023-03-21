@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Text;
+using System.Xml.Linq;
 
 namespace DSA.Library.LinkedList
 {
@@ -37,10 +39,40 @@ namespace DSA.Library.LinkedList
 
         public bool Remove(T data)
         {
-            throw new NotImplementedException();
+            bool removed = false;
+            if (Head is null)
+            {
+                return false;
+            }
+            var tempNode = Head;
+            if (tempNode.Data is null)
+            {
+                return removed;
+            }
+            if (tempNode.Data.Equals(data))
+            {
+                Head = tempNode.Next;
+                return true;
+            }
+            var previousNode = Head;
+            while (tempNode is not null)
+            {
+                if (tempNode.Data is not null)
+                {
+                    if (tempNode.Data.Equals(data))
+                    {
+                        previousNode.Next = tempNode.Next;
+                        return true;
+                    }
+                    previousNode = tempNode;
+                    tempNode = tempNode.Next;
+  
+                }
+            }
+           return removed;
         }
 
-        internal MyLinkedListNode<T> AddLast(T value)
+        public MyLinkedListNode<T> AddLast(T value)
         {
             MyLinkedListNode<T> newNode= new MyLinkedListNode<T>(value);
             Count++;
@@ -56,6 +88,23 @@ namespace DSA.Library.LinkedList
             }
             tempNode.Next = newNode;    
             return newNode ;
+        }
+
+        public string PrintList()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            if (Head == null)
+            {
+                return stringBuilder.ToString();
+            }
+            var tempNode = Head;
+            while (tempNode.Next is not null)
+            {
+                stringBuilder.AppendFormat("{0} ", tempNode.Data);
+                tempNode = tempNode.Next;
+            }
+            stringBuilder.AppendFormat("{0} ", tempNode.Data);
+            return stringBuilder.ToString();
         }
 
         internal T? GetElementByIndex(int index)
