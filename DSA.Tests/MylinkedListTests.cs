@@ -1,12 +1,4 @@
-﻿using DSA.Library.LinkedList;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
-namespace DSA.Tests
+﻿namespace DSA.Tests
 {
     public  class MylinkedListTests
     {
@@ -23,8 +15,8 @@ namespace DSA.Tests
             list.AddLast(2);
             list.AddLast(3);
             list.Remove(10);
-            var actual=list.PrintList();
-            Assert.Equal("12 15 11 5 6 2 3", actual.ToString());
+            var actual=list.PrintList(); 
+            Assert.Equal("12 15 11 5 6 2 3 ", actual.ToString());
         }
 
         [Fact]
@@ -41,7 +33,7 @@ namespace DSA.Tests
             list.AddLast(3);
             list.Remove(12);
             var actual = list.PrintList();
-            Assert.Equal("15 10 11 5 6 2 3", actual.ToString());
+            Assert.Equal("15 10 11 5 6 2 3 ", actual.ToString());
         }
         [Fact]
         public void Validate_remove_not_existent_element()
@@ -57,7 +49,7 @@ namespace DSA.Tests
             list.AddLast(3);
             list.Remove(45);
             var actual = list.PrintList();
-            Assert.Equal("12 15 10 11 5 6 2 3", actual.ToString());
+            Assert.Equal("12 15 10 11 5 6 2 3 ", actual.ToString());
         }
     }
 }
