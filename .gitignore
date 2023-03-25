@@ -6,3 +6,5 @@
 /DSA.Tests/bin/Release/net7.0
 *.sqlite
 /.vs/VSWorkspaceState.json
+/DSA.Tests/obj/Debug/net7.0/DSA.Tests.csproj.AssemblyReference.cache
+/.vs/DSA/v17/.suo
