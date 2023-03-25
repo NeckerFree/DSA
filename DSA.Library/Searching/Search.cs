@@ -16,12 +16,40 @@
             arrayLength = input.Length;
         }
 
-        public int BinarySearch(int valueToSearch)
+        public int BinarySearchRecursive(int valueToSearch)
         {
-           return BinarySearch(0, input.Length, valueToSearch);
+           return BinarySearchRecursive(0, input.Length, valueToSearch);
         }
 
-        private int BinarySearch(int lowIndex, int highIndex, int valueToSearch)
+        public int BinarySearchIterative(int valueToSearch)
+        {
+            return BinarySearchIterative(0, input.Length, valueToSearch);
+        }
+
+        private int BinarySearchIterative(int low, int high, int target)
+        {       
+            while (low < high)
+            {
+                int middle=(low+high)/2;
+                
+                if (target < input[middle])
+                {
+                    high = middle;
+                }
+                else
+                {
+                     if (target > input[middle])
+                    {
+                        low = middle;
+                    }
+                     else return middle;
+                }
+
+            }
+            return -1;
+        }
+
+        private int BinarySearchRecursive(int lowIndex, int highIndex, int valueToSearch)
         {
             if (lowIndex==highIndex) { return -1;}
              int middle = lowIndex + (int)Math.Floor((decimal)(highIndex-lowIndex) / 2);
@@ -33,11 +61,11 @@
             if (middle == lowIndex) { return -1; }
             if (input[middle] > valueToSearch)
             {
-                return BinarySearch(lowIndex, middle-1 , valueToSearch);
+                return BinarySearchRecursive(lowIndex, middle-1 , valueToSearch);
             }
             else
             {
-                return BinarySearch(middle+1, arrayLength, valueToSearch);
+                return BinarySearchRecursive(middle+1, arrayLength, valueToSearch);
             }
         }
     }
