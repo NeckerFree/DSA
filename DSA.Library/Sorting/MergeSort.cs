@@ -4,9 +4,14 @@
     {
         private int[] inputArray;
 
+        public int LengthArray { get; private set; }
+
+        public int Operations { get; private set; }
+
         public MergeSort(int[] inputArray)
         {
             this.inputArray = inputArray;
+            LengthArray = inputArray.Length;
         }
 
         public int[] Execute()
@@ -15,49 +20,71 @@
             return inputArray;
         }
 
-        private void SortSubArray(int low, int high)
+
+        private void SortSubArray(int left, int right)
         {
-            if (low < high)
+            if (right == left)
             {
-                int middle = low + (high - low) / 2;
-                if (middle > 0)
-                {
-                    SortSubArray(low, middle);
-                    SortSubArray(middle + 1, high);
-                    Merge(low, middle, high);
-                }
-                
+                return;
             }
+            int middle = left + (right - left) / 2;
+            SortSubArray(left, middle);
+            SortSubArray(middle + 1, right);
+            Merge(left, middle, right);
         }
 
-        private void Merge(int low, int middle, int high)
+
+
+        private void Merge(int left, int middle, int right)
         {
-            int leftLength = middle - low + 1;
-            int rightLength = high - middle;
-            var leftArray = inputArray[leftLength..middle];
-            var rightArray = inputArray[middle..rightLength];
+            int index = 0;
             int i = 0;
             int j = 0;
-            int k = low;
-            while (i < leftLength && j < rightLength)
+            var leftArray = inputArray[left..(middle + 1)];
+            var rightLimit= (right == LengthArray) ? right : right + 1;
+            var rightArray = inputArray[(middle + 1)..(rightLimit)] ;
+            while (i < leftArray.Length && j < rightArray.Length)
             {
-                if (leftArray[i] <= rightArray[j])
+                Operations++;
+                if (leftArray[i] < rightArray[j])
                 {
-                    inputArray[k++] = leftArray[i++];
+                    inputArray[left+ index++] = leftArray[i++];
+                    Operations++;
                 }
                 else
                 {
-                    inputArray[k++] = rightArray[j++];
+                    inputArray[left+ index++] = rightArray[j++];
+                    Operations++;
                 }
             }
-            while (i < leftLength)
+            while (i < leftArray.Length)
             {
-                inputArray[k++] = leftArray[i++];
+                inputArray[left+ index++] = leftArray[i++];
+                Operations++;
             }
-            while (j < rightLength)
-            {
-                inputArray[k++] = rightArray[j++];
-            }
+            
+        }
+
+        public static int[] GenerateRandomNumber(int size)
+        {
+            var array = new int[size];
+            var rand = new Random();
+            var maxNum = 10000;
+
+            for (int i = 0; i < size; i++)
+                array[i] = rand.Next(maxNum + 1);
+
+            return array;
+        }
+
+        public static int[] GenerateSortedNumber(int size)
+        {
+            var array = new int[size];
+
+            for (int i = 0; i < size; i++)
+                array[i] = i;
+
+            return array;
         }
     }
 }
