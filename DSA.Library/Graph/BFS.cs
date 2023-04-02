@@ -17,12 +17,12 @@ namespace DSA.Library.Graph
         public int?[] Traverse(int nodeValue)
         {
             List<int?> path = new List<int?>();
-            bool[] visited = new bool[graph.Vertices];
+            bool[] visited = new bool[graph.Edges];
             for (int i = 0; i < visited.Length; i++)
             {
                 visited[i] = false;
             }
-            MyQueue<int> queue = new MyQueue<int>(graph.Vertices);
+            MyQueue<int> queue = new MyQueue<int>(graph.Edges);
             visited[nodeValue] = true;
             queue.Enqueue(nodeValue);
             while (queue.IsEmpty == false)

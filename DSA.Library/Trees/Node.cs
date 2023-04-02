@@ -1,16 +1,17 @@
 ﻿namespace DSA.Library.Trees
 {
-        public class Node
+    public class Node<T>
     {
-        public int data;
-        public Node? left;
-        public Node? right;
-        public Node(int value)
+        public T? data;
+        public Node<T>? left;
+        public Node<T>? right;
+        
+        public Node(T? value)
         {
             data = value;
             left = null;
             right = null;
         }
     }
-    
+
 }
