@@ -14,8 +14,8 @@ namespace DSA.Library.Graph
 
         public int?[] Traverse()
         {
-            bool[] visited = new bool[graph.Vertices];
-            for (int i = 0; i < graph.Vertices; i++)
+            bool[] visited = new bool[graph.Edges];
+            for (int i = 0; i < graph.Edges; i++)
             {
                 if (visited[i] == false)
                 {

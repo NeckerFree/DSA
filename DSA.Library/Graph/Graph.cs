@@ -8,18 +8,18 @@ namespace DSA.Library.Graph
     public class Graph
     {
 
-        public int Vertices { get; internal set; }
+        public int Edges { get; internal set; }
 
         MyLinkedList<int>[] _adjacencyList;
 
-        public Graph(int numVertices)
+        public Graph(int numEdges)
         {
-            _adjacencyList = new MyLinkedList<int>[numVertices];
+            _adjacencyList = new MyLinkedList<int>[numEdges];
             for (int i = 0; i < _adjacencyList.Length; i++)
             {
                 _adjacencyList[i] = new MyLinkedList<int>();
             }
-            Vertices = numVertices;
+            Edges = numEdges;
         }
 
         
